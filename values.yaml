@@ -57,7 +57,7 @@ tolerations: []
 ##
 affinity: {}
 
-## Configure extra options for liveness probe
+## Configure extra options for liveness and readiness probes
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
 livenessProbe:
   enabled: true
@@ -65,4 +65,12 @@ livenessProbe:
   periodSeconds: 5
   timeoutSeconds: 5
   failureThreshold: 6
-successThreshold: 1
+  successThreshold: 1
+
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
