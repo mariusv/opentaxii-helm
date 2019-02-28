@@ -1,5 +1,9 @@
 apiVersion: v1
 appVersion: "1.0"
 description: A Helm chart to deploy OpenTAXII on Kubernetes
-name: opentaxii-helm
+name: opentaxii
+home: https://opentaxii.readthedocs.io/en/stable/
 version: 0.1.0
+maintainers:
+- name: Marius Voila
+  email: myself@mariusv.com
